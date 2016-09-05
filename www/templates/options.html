@@ -1,0 +1,22 @@
+<ng-app="app" ion-view title="Options" id="page2" style="background-color:#5096C7;">
+    <ion-content padding="true" class="has-header"scroll="false">
+        <h3 id="options-heading2" style="color:#000000;">Language</h3>
+        <form id="options-form1" class="list">
+            <label class="item item-select" id="options-select1" name="Language">
+                <span class="input-label">Select Language</span>
+                <select>
+                    <option>English</option>
+                    <option>B. Malaysia</option>
+                    <option>Mandarin</option>
+                    <option>Tamil</option>
+                </select>
+            </label>
+        </form>
+        <h3 id="options-heading3" style="color:#000000;">Device Options</h3>
+        <form id="options-form2" class="list" ng-controller="deviceSettings">
+            <ion-toggle toggle-class="toggle-energized" id="options-toggle1" ng-model="vibrate.checked"
+              ng-change = "vibrationChange()">Vibrate</ion-toggle>
+            <ion-toggle toggle-class="toggle-royal" id="options-toggle2" ng-model="option.isSelected">Sound</ion-toggle>
+        </form>
+    </ion-content>
+</ion-view>

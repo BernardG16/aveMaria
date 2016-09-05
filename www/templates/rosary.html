@@ -1,0 +1,150 @@
+<body>
+<ion-view title="Rosary" id="page5" style="background-color:#5096C7;" >
+    <ion-content padding="true" class="has-header" scroll="false">
+        <div class="card" id="rosary-card21" scroll="true">
+          <div class="item item-divider">
+            <h4 id="rosary-heading5" style="color:#5239FF; text-align:center; font-size: 25px">Prayer</h4>
+          </div>
+            <div id="rosary-markdown3" style="color:black; height: 200px" ng-controller="cardCtrl" ng-trim="false">
+                <p>
+                  {{showPrayer()}}
+                </p>
+            </div>
+            <div class="item item-divider" ng-controller="cardCtrl" style="text-align: center">
+              <p>
+                {{ showDecadeNum() }}
+              </p>
+            </div>
+        </div>
+        <div ng-controller="beadCtrl">
+        <ion-slides options="options" style="height: 270px; width: 140px;">
+          <ion-slide-page><button class="button button-clear button-large" ng-click="credo('1')">
+            <img src="img/CrossPic.png" style = "width: 30%; height: 30%"></button></ion-slide-page>
+          <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('1')">
+            <img src="img/BeadPic.png" style = "width: 50%; height: 50%"></button></ion-slide-page>
+          <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('2')">
+            <img src="img/BeadPic.png" style = "width: 50%; height: 50%"></button></ion-slide-page>
+          <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('3')">
+            <img src="img/BeadPic.png" style = "width: 50%; height: 50%"></button></ion-slide-page>
+          <ion-slide-page><button class="button button-clear button-large" ng-click="GloriaPatri('1')">
+            <img src="img/BeadPic.png" style = "width: 50%; height: 50%"></button></ion-slide-page>
+          <!-- 1st decade-->
+          <ion-slide-page><button class="button button-clear button-large" ng-click="paterNoster('1st')">
+            <img src="img/decadeBead.png" style = "width: 50%; height: 50%"></button></ion-slide-page>
+          <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('1')">
+            <img src="img/BeadPic.png" style = "width: 50%; height: 50%">1</button></ion-slide-page>
+          <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('2')">
+            <img src="img/BeadPic.png" style = "width: 50%; height: 50%">2</button></ion-slide-page>
+          <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('3')">
+            <img src="img/BeadPic.png" style = "width: 50%; height: 50%">3</button></ion-slide-page>
+          <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('4')">
+            <img src="img/BeadPic.png" style = "width: 50%; height: 50%">4</button></ion-slide-page>
+          <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('5')">
+            <img src="img/BeadPic.png" style = "width: 50%; height: 50%">5</button></ion-slide-page>
+          <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('6')">
+            <img src="img/BeadPic.png" style = "width: 50%; height: 50%">6</button></ion-slide-page>
+          <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('7')">
+            <img src="img/BeadPic.png" style = "width: 50%; height: 50%">7</button></ion-slide-page>
+          <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('8')">
+            <img src="img/BeadPic.png" style = "width: 50%; height: 50%">8</button></ion-slide-page>
+          <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('9')">
+            <img src="img/BeadPic.png" style = "width: 50%; height: 50%">9</button></ion-slide-page>
+          <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('10')">
+            <img src="img/BeadPic.png" style = "width: 50%; height: 50%">1</button></ion-slide-page>
+            <!--second decade-->
+          <ion-slide-page><button class="button button-clear button-large" ng-click="paterNoster('2nd')">
+            <img src="img/decadeBead.png" style = "width: 50%; height: 50%"></button></ion-slide-page>
+            <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('1')">
+              <img src="img/BeadPic.png" style = "width: 50%; height: 50%">1</button></ion-slide-page>
+            <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('2')">
+              <img src="img/BeadPic.png" style = "width: 50%; height: 50%">2</button></ion-slide-page>
+            <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('3')">
+              <img src="img/BeadPic.png" style = "width: 50%; height: 50%">3</button></ion-slide-page>
+            <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('4')">
+              <img src="img/BeadPic.png" style = "width: 50%; height: 50%">4</button></ion-slide-page>
+            <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('5')">
+              <img src="img/BeadPic.png" style = "width: 50%; height: 50%">5</button></ion-slide-page>
+            <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('6')">
+              <img src="img/BeadPic.png" style = "width: 50%; height: 50%">6</button></ion-slide-page>
+            <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('7')">
+              <img src="img/BeadPic.png" style = "width: 50%; height: 50%">7</button></ion-slide-page>
+            <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('8')">
+              <img src="img/BeadPic.png" style = "width: 50%; height: 50%">8</button></ion-slide-page>
+            <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('9')">
+              <img src="img/BeadPic.png" style = "width: 50%; height: 50%">9</button></ion-slide-page>
+            <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('10')">
+              <img src="img/BeadPic.png" style = "width: 50%; height: 50%">1</button></ion-slide-page>
+              <!--third decade-->
+              <ion-slide-page><button class="button button-clear button-large" ng-click="paterNoster('3rd')">
+                <img src="img/decadeBead.png" style = "width: 50%; height: 50%"></button></ion-slide-page>
+              <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('1')">
+                <img src="img/BeadPic.png" style = "width: 50%; height: 50%">1</button></ion-slide-page>
+              <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('2')">
+                <img src="img/BeadPic.png" style = "width: 50%; height: 50%">2</button></ion-slide-page>
+              <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('3')">
+                <img src="img/BeadPic.png" style = "width: 50%; height: 50%">3</button></ion-slide-page>
+              <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('4')">
+                <img src="img/BeadPic.png" style = "width: 50%; height: 50%">4</button></ion-slide-page>
+              <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('5')">
+                <img src="img/BeadPic.png" style = "width: 50%; height: 50%">5</button></ion-slide-page>
+              <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('6')">
+                <img src="img/BeadPic.png" style = "width: 50%; height: 50%">6</button></ion-slide-page>
+              <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('7')">
+                <img src="img/BeadPic.png" style = "width: 50%; height: 50%">7</button></ion-slide-page>
+              <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('8')">
+                <img src="img/BeadPic.png" style = "width: 50%; height: 50%">8</button></ion-slide-page>
+              <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('9')">
+                <img src="img/BeadPic.png" style = "width: 50%; height: 50%">9</button></ion-slide-page>
+              <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('10')">
+                <img src="img/BeadPic.png" style = "width: 50%; height: 50%">1</button></ion-slide-page>
+                <!--fourth decade-->
+                <ion-slide-page><button class="button button-clear button-large" ng-click="paterNoster('4th')">
+                  <img src="img/decadeBead.png" style = "width: 50%; height: 50%"></button></ion-slide-page>
+                <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('1')">
+                  <img src="img/BeadPic.png" style = "width: 50%; height: 50%">1</button></ion-slide-page>
+                <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('2')">
+                  <img src="img/BeadPic.png" style = "width: 50%; height: 50%">2</button></ion-slide-page>
+                <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('3')">
+                  <img src="img/BeadPic.png" style = "width: 50%; height: 50%">3</button></ion-slide-page>
+                <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('4')">
+                  <img src="img/BeadPic.png" style = "width: 50%; height: 50%">4</button></ion-slide-page>
+                <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('5')">
+                  <img src="img/BeadPic.png" style = "width: 50%; height: 50%">5</button></ion-slide-page>
+                <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('6')">
+                  <img src="img/BeadPic.png" style = "width: 50%; height: 50%">6</button></ion-slide-page>
+                <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('7')">
+                  <img src="img/BeadPic.png" style = "width: 50%; height: 50%">7</button></ion-slide-page>
+                <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('8')">
+                  <img src="img/BeadPic.png" style = "width: 50%; height: 50%">8</button></ion-slide-page>
+                <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('9')">
+                  <img src="img/BeadPic.png" style = "width: 50%; height: 50%">9</button></ion-slide-page>
+                <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('10')">
+                  <img src="img/BeadPic.png" style = "width: 50%; height: 50%">1</button></ion-slide-page>
+                  <!-- fifth decade-->
+                  <ion-slide-page><button class="button button-clear button-large" ng-click="paterNoster('5th')">
+                    <img src="img/decadeBead.png" style = "width: 50%; height: 50%"></button></ion-slide-page>
+                  <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('1')">
+                    <img src="img/BeadPic.png" style = "width: 50%; height: 50%">1</button></ion-slide-page>
+                  <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('2')">
+                    <img src="img/BeadPic.png" style = "width: 50%; height: 50%">2</button></ion-slide-page>
+                  <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('3')">
+                    <img src="img/BeadPic.png" style = "width: 50%; height: 50%">3</button></ion-slide-page>
+                  <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('4')">
+                    <img src="img/BeadPic.png" style = "width: 50%; height: 50%">4</button></ion-slide-page>
+                  <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('5')">
+                    <img src="img/BeadPic.png" style = "width: 50%; height: 50%">5</button></ion-slide-page>
+                  <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('6')">
+                    <img src="img/BeadPic.png" style = "width: 50%; height: 50%">6</button></ion-slide-page>
+                  <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('7')">
+                    <img src="img/BeadPic.png" style = "width: 50%; height: 50%">7</button></ion-slide-page>
+                  <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('8')">
+                    <img src="img/BeadPic.png" style = "width: 50%; height: 50%">8</button></ion-slide-page>
+                  <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('9')">
+                    <img src="img/BeadPic.png" style = "width: 50%; height: 50%">9</button></ion-slide-page>
+                  <ion-slide-page><button class="button button-clear button-large" ng-click="decadeBead('10')">
+                    <img src="img/BeadPic.png" style = "width: 50%; height: 50%">1</button></ion-slide-page>
+        </ion-slides>
+      </div>
+    </ion-content>
+</ion-view>
+</body>
